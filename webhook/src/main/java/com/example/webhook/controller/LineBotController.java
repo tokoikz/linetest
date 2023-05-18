@@ -13,6 +13,7 @@ public class LineBotController {
         // ここでは簡易的にSystem.out.printlnで出力していますが、
         // 実際にはJSONパースライブラリ（例えばJacksonなど）を使用して情報を取り出すべきです。
         System.out.println(payload);
+        System.out.println("payload");
     }
 
 }
