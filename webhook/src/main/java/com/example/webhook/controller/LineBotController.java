@@ -1,19 +1,15 @@
-package com.example.webhook.controller;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 @RestController
 public class LineBotController {
 
     @PostMapping("/line/webhook")
-    public void webhook(@RequestBody String payload) {
-        // payloadはJSON形式の文字列です。これを適切にパースしてユーザIDなどの情報を取り出します。
-        // ここでは簡易的にSystem.out.printlnで出力していますが、
-        // 実際にはJSONパースライブラリ（例えばJacksonなど）を使用して情報を取り出すべきです。
+    public void webhook(@RequestBody Map<String, Object> payload) {
+        // payloadはJSON形式のデータをMapとして受け取ります。
         System.out.println(payload);
-        System.out.println("payload");
     }
-
 }
